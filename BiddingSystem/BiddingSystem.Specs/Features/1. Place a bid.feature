@@ -32,6 +32,10 @@ Scenario: Multiple users placing bids - all bids will be saved
 
 Scenario: Update my bid
 
-Scenario: Place bid without price will get error
+Scenario: Place bid without price - Get an error
 
-Scenario: Place bid without username will get error
+Scenario: Place bid with price 0 - Get an error
+
+Scenario: Place bid with price lesser than 0 - Get an error
+
+Scenario: Place bid without username - Get an error
