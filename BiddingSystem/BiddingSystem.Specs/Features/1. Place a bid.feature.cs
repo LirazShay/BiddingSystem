@@ -154,10 +154,10 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Update my bid")]
-        public virtual void UpdateMyBid()
+        [NUnit.Framework.DescriptionAttribute("Update my bid - the bid will be updated correctly")]
+        public virtual void UpdateMyBid_TheBidWillBeUpdatedCorrectly()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update my bid", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update my bid - the bid will be updated correctly", null, ((string[])(null)));
 #line 33
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

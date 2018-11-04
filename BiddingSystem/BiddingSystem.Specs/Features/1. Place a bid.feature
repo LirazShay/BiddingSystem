@@ -30,7 +30,7 @@ Scenario: Multiple users placing bids - all bids will be saved
 		| user2    | 14.50 |
 
 
-Scenario: Update my bid
+Scenario: Update my bid - the bid will be updated correctly
 
 Scenario: Place bid without price - Get an error
 
