@@ -77,16 +77,36 @@ namespace BiddingSystem.Specs.Features
 #line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 8
+ testRunner.Given("there is an open auction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table1.AddRow(new string[] {
+                        "user1",
+                        "12.00"});
+#line 9
+ testRunner.When("I place a bid", ((string)(null)), table1, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table2.AddRow(new string[] {
+                        "user1",
+                        "12.00"});
+#line 12
+ testRunner.Then("my bid will be saved correly", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Multiple users placing a bid - all bids will be saved")]
-        public virtual void MultipleUsersPlacingABid_AllBidsWillBeSaved()
+        [NUnit.Framework.DescriptionAttribute("Multiple users placing bids - all bids will be saved")]
+        public virtual void MultipleUsersPlacingBids_AllBidsWillBeSaved()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiple users placing a bid - all bids will be saved", null, ((string[])(null)));
-#line 9
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiple users placing bids - all bids will be saved", null, ((string[])(null)));
+#line 17
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line hidden
@@ -98,7 +118,7 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void UpdateMyBid()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update my bid", null, ((string[])(null)));
-#line 11
+#line 20
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line hidden
@@ -110,7 +130,7 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void PlaceBidWithoutPriceWillGetError()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Place bid without price will get error", null, ((string[])(null)));
-#line 13
+#line 22
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line hidden
@@ -122,7 +142,7 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void PlaceBidWithoutUsernameWillGetError()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Place bid without username will get error", null, ((string[])(null)));
-#line 15
+#line 24
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line hidden

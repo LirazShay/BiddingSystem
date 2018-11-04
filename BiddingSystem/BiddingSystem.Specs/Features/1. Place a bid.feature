@@ -5,8 +5,17 @@
 
 
 Scenario: Place a new bid - the bid will be saved
+	Given there is an open auction
+	When I place a bid
+		| Username | Price |
+		| user1    | 12.00 |
+	Then my bid will be saved correly
+		| Username | Price |
+		| user1    | 12.00 |
 
-Scenario: Multiple users placing a bid - all bids will be saved
+
+Scenario: Multiple users placing bids - all bids will be saved
+
 
 Scenario: Update my bid
 
