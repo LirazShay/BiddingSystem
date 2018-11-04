@@ -56,27 +56,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\2. Get all bids.feature.cs">
+    <Compile Include="Features\3. Get all bids.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>2. Get all bids.feature</DependentUpon>
+      <DependentUpon>3. Get all bids.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\1. Place a bid.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>1. Place a bid.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\2. Show errors for invalid bids.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>2. Show errors for invalid bids.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Features\2. Get all bids.feature">
+    <None Include="Features\3. Get all bids.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>2. Get all bids.feature.cs</LastGenOutput>
+      <LastGenOutput>3. Get all bids.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\1. Place a bid.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>1. Place a bid.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\2. Show errors for invalid bids.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>2. Show errors for invalid bids.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

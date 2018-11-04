@@ -41,21 +41,7 @@ Scenario: Update my bid - the bid will be updated correctly
 		| Username | Price |
 		| user1    | 15.05 |
 
-
-Scenario: Place bid without price - Get an error
-	When I place a bid
-		| Username | Price |
-		| user1    | Null  |
-	Then I will get an error "Price cannot be empty!"
-
-
-Scenario: Place bid with price 0 - Get an error
-	When I place a bid
-		| Username | Price |
-		| user1    | 0     |
-	Then I will get an error "Price must be greater than 0"
-
-
+			   
 Scenario: Place bid with price 0.05 will be allowed
 	When I place a bid
 		| Username | Price |
@@ -63,17 +49,3 @@ Scenario: Place bid with price 0.05 will be allowed
 	Then the bid list will be
 		| Username | Price |
 		| user1    | 0.05  |
-
-
-Scenario: Place bid with price lesser than 0 - Get an error
-	When I place a bid
-		| Username | Price |
-		| user1    | -1    |
-	Then I will get an error "Price must be greater than 0"
-
-
-Scenario: Place bid without username - Get an error
-	When I place a bid
-		| Username | Price |
-		| user1    | -1    |
-	Then I will get an error "Price must be greater than 0"

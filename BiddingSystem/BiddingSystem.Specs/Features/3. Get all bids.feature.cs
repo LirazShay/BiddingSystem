@@ -24,7 +24,7 @@ namespace BiddingSystem.Specs.Features
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "2. Get all bids.feature"
+#line 1 "3. Get all bids.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
