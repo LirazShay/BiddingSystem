@@ -120,6 +120,36 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table3.AddRow(new string[] {
+                        "user1",
+                        "12.00"});
+#line 21
+ testRunner.When("I place a bid", ((string)(null)), table3, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table4.AddRow(new string[] {
+                        "user2",
+                        "14.50"});
+#line 24
+ testRunner.And("I place a bid", ((string)(null)), table4, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table5.AddRow(new string[] {
+                        "user1",
+                        "12.00"});
+            table5.AddRow(new string[] {
+                        "user2",
+                        "14.50"});
+#line 27
+ testRunner.Then("all bids will be saved correctly", ((string)(null)), table5, "Then ");
+#line hidden
             this.ScenarioCleanup();
         }
         
@@ -128,7 +158,7 @@ this.FeatureBackground();
         public virtual void UpdateMyBid()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update my bid", null, ((string[])(null)));
-#line 23
+#line 33
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
@@ -142,7 +172,7 @@ this.FeatureBackground();
         public virtual void PlaceBidWithoutPriceWillGetError()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Place bid without price will get error", null, ((string[])(null)));
-#line 25
+#line 35
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
@@ -156,7 +186,7 @@ this.FeatureBackground();
         public virtual void PlaceBidWithoutUsernameWillGetError()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Place bid without username will get error", null, ((string[])(null)));
-#line 27
+#line 37
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7

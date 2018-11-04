@@ -18,6 +18,16 @@ Scenario: Place a new bid - the bid will be saved
 
 
 Scenario: Multiple users placing bids - all bids will be saved
+	When I place a bid
+		| Username | Price |
+		| user1    | 12.00 |
+	And I place a bid
+		| Username | Price |
+		| user2    | 14.50 |
+	Then all bids will be saved correctly
+		| Username | Price |
+		| user1    | 12.00 |
+		| user2    | 14.50 |
 
 
 Scenario: Update my bid
