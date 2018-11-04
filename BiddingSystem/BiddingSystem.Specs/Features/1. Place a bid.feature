@@ -3,7 +3,10 @@
 	As a user
 	I want to place my bid
 
-Scenario: Place a new bid
+
+Scenario: Place a new bid - the bid will be saved
+
+Scenario: Multiple users placing a bid - all bids will be saved
 
 Scenario: Update my bid
 
