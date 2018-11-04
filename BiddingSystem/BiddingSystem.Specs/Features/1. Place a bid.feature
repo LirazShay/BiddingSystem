@@ -66,6 +66,14 @@ Scenario: Place bid with price 0.05 will be allowed
 
 
 Scenario: Place bid with price lesser than 0 - Get an error
+	When I place a bid
+		| Username | Price |
+		| user1    | -1    |
+	Then I will get an error "Price must be greater than 0"
 
 
 Scenario: Place bid without username - Get an error
+	When I place a bid
+		| Username | Price |
+		| user1    | -1    |
+	Then I will get an error "Price must be greater than 0"
