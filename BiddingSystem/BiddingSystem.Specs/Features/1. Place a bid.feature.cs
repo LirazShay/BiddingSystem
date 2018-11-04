@@ -104,7 +104,7 @@ this.FeatureBackground();
                         "user1",
                         "12.00"});
 #line 15
- testRunner.Then("my bid will be saved correly", ((string)(null)), table2, "Then ");
+ testRunner.Then("the bid list will be", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -148,7 +148,7 @@ this.FeatureBackground();
                         "user2",
                         "14.50"});
 #line 27
- testRunner.Then("all bids will be saved correctly", ((string)(null)), table5, "Then ");
+ testRunner.Then("the bid list will be", ((string)(null)), table5, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -164,6 +164,33 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table6.AddRow(new string[] {
+                        "user1",
+                        "12.00"});
+#line 34
+ testRunner.When("I place a bid", ((string)(null)), table6, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table7.AddRow(new string[] {
+                        "user1",
+                        "15.05"});
+#line 37
+ testRunner.And("I place a bid", ((string)(null)), table7, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table8.AddRow(new string[] {
+                        "user1",
+                        "15.05"});
+#line 40
+ testRunner.Then("the bid list will be", ((string)(null)), table8, "Then ");
+#line hidden
             this.ScenarioCleanup();
         }
         
@@ -172,7 +199,7 @@ this.FeatureBackground();
         public virtual void PlaceBidWithoutPrice_GetAnError()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Place bid without price - Get an error", null, ((string[])(null)));
-#line 35
+#line 45
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
@@ -186,7 +213,7 @@ this.FeatureBackground();
         public virtual void PlaceBidWithPrice0_GetAnError()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Place bid with price 0 - Get an error", null, ((string[])(null)));
-#line 37
+#line 47
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
@@ -200,7 +227,7 @@ this.FeatureBackground();
         public virtual void PlaceBidWithPriceLesserThan0_GetAnError()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Place bid with price lesser than 0 - Get an error", null, ((string[])(null)));
-#line 39
+#line 49
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
@@ -214,7 +241,7 @@ this.FeatureBackground();
         public virtual void PlaceBidWithoutUsername_GetAnError()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Place bid without username - Get an error", null, ((string[])(null)));
-#line 41
+#line 51
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7

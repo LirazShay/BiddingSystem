@@ -12,7 +12,7 @@ Scenario: Place a new bid - the bid will be saved
 	When I place a bid
 		| Username | Price |
 		| user1    | 12.00 |
-	Then my bid will be saved correly
+	Then the bid list will be
 		| Username | Price |
 		| user1    | 12.00 |
 
@@ -24,13 +24,23 @@ Scenario: Multiple users placing bids - all bids will be saved
 	And I place a bid
 		| Username | Price |
 		| user2    | 14.50 |
-	Then all bids will be saved correctly
+	Then the bid list will be
 		| Username | Price |
 		| user1    | 12.00 |
 		| user2    | 14.50 |
 
 
 Scenario: Update my bid - the bid will be updated correctly
+	When I place a bid
+		| Username | Price |
+		| user1    | 12.00 |
+	And I place a bid
+		| Username | Price |
+		| user1    | 15.05 |
+	Then the bid list will be
+		| Username | Price |
+		| user1    | 15.05 |
+
 
 Scenario: Place bid without price - Get an error
 
