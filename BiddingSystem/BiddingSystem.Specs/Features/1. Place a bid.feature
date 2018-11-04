@@ -4,8 +4,11 @@
 	I want to place my bid
 
 
-Scenario: Place a new bid - the bid will be saved
+Background: 
 	Given there is an open auction
+
+
+Scenario: Place a new bid - the bid will be saved
 	When I place a bid
 		| Username | Price |
 		| user1    | 12.00 |
