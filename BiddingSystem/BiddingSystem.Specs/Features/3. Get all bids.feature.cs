@@ -89,9 +89,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line 12
- testRunner.When("I get all current bids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I perform get all bids request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
- testRunner.Then("the bids list in the response will be empty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the response will be empty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -114,7 +114,9 @@ this.FeatureBackground();
                         "user1",
                         "12.00"});
 #line 17
- testRunner.When("I place a bid", ((string)(null)), table1, "When ");
+ testRunner.Given("the following bids were offered", ((string)(null)), table1, "Given ");
+#line 20
+ testRunner.When("I perform get all bids request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Username",
@@ -122,7 +124,7 @@ this.FeatureBackground();
             table2.AddRow(new string[] {
                         "user1",
                         "12.00"});
-#line 20
+#line 21
  testRunner.Then("the response will contain the bid list", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -133,7 +135,7 @@ this.FeatureBackground();
         public virtual void WhenThereAreMultipleBidsTheyWillBeSortedByPriceDescending()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When there are multiple bids, they will be sorted by price descending", null, ((string[])(null)));
-#line 25
+#line 26
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
@@ -145,53 +147,37 @@ this.FeatureBackground();
             table3.AddRow(new string[] {
                         "user1",
                         "12.00"});
-#line 26
- testRunner.When("I place a bid", ((string)(null)), table3, "When ");
+            table3.AddRow(new string[] {
+                        "user2",
+                        "10.00"});
+            table3.AddRow(new string[] {
+                        "user4",
+                        "15.50"});
+            table3.AddRow(new string[] {
+                        "user3",
+                        "00.05"});
+#line 27
+ testRunner.Given("the following bids were offered", ((string)(null)), table3, "Given ");
+#line 33
+ testRunner.When("I perform get all bids request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "Username",
                         "Price"});
             table4.AddRow(new string[] {
-                        "user2",
-                        "10.00"});
-#line 29
- testRunner.And("I place a bid", ((string)(null)), table4, "And ");
-#line hidden
-            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Username",
-                        "Price"});
-            table5.AddRow(new string[] {
                         "user4",
                         "15.50"});
-#line 32
- testRunner.And("I place a bid", ((string)(null)), table5, "And ");
-#line hidden
-            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Username",
-                        "Price"});
-            table6.AddRow(new string[] {
-                        "user3",
-                        "00.05"});
-#line 35
- testRunner.And("I place a bid", ((string)(null)), table6, "And ");
-#line hidden
-            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Username",
-                        "Price"});
-            table7.AddRow(new string[] {
-                        "user4",
-                        "15.50"});
-            table7.AddRow(new string[] {
+            table4.AddRow(new string[] {
                         "user1",
                         "12.00"});
-            table7.AddRow(new string[] {
+            table4.AddRow(new string[] {
                         "user2",
                         "10.00"});
-            table7.AddRow(new string[] {
+            table4.AddRow(new string[] {
                         "user3",
                         "00.05"});
-#line 38
- testRunner.Then("the response will contain the bid list", ((string)(null)), table7, "Then ");
+#line 34
+ testRunner.Then("the response will contain the bid list", ((string)(null)), table4, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

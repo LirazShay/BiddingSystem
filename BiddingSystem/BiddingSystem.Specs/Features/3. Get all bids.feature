@@ -5,36 +5,32 @@
 
 
 Background:
-	Given there is an open auction
+	Given there is an open auction 
 
 
 Scenario: When there are no bids yet - Get empty list
-	When I get all current bids
-	Then the bids list in the response will be empty
+	When I perform get all bids request
+	Then the response will be empty
 
 	
 Scenario: There is only 1 bid, get this bid
-	When I place a bid
+	Given the following bids were offered
 		| Username | Price |
 		| user1    | 12.00 |
+	When I perform get all bids request
 	Then the response will contain the bid list
 		| Username | Price |
 		| user1    | 12.00 |
 
 
 Scenario: When there are multiple bids, they will be sorted by price descending
-	When I place a bid
+	Given the following bids were offered
 		| Username | Price |
 		| user1    | 12.00 |
-	And I place a bid
-		| Username | Price |
 		| user2    | 10.00 |
-	And I place a bid
-		| Username | Price |
 		| user4    | 15.50 |
-	And I place a bid
-		| Username | Price |
 		| user3    | 00.05 |
+	When I perform get all bids request
 	Then the response will contain the bid list
 		| Username | Price |
 		| user4    | 15.50 |
