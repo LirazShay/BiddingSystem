@@ -70,14 +70,28 @@ namespace BiddingSystem.Specs.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 7
+#line 8
+ testRunner.Given("there is an open auction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("When there are no bids yet - Get empty list")]
         public virtual void WhenThereAreNoBidsYet_GetEmptyList()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When there are no bids yet - Get empty list", null, ((string[])(null)));
-#line 7
+#line 11
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 12
+ testRunner.When("I get all current bids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
+ testRunner.Then("the bids list in the response will be empty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -87,9 +101,29 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void ThereIsOnly1BidGetThisBid()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("There is only 1 bid, get this bid", null, ((string[])(null)));
-#line 9
+#line 16
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table1.AddRow(new string[] {
+                        "user1",
+                        "12.00"});
+#line 17
+ testRunner.When("I place a bid", ((string)(null)), table1, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table2.AddRow(new string[] {
+                        "user1",
+                        "12.00"});
+#line 20
+ testRunner.Then("the response will contain the bid list", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -99,9 +133,65 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void WhenThereAreMultipleBidsTheyWillBeSortedByPriceDescending()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When there are multiple bids, they will be sorted by price descending", null, ((string[])(null)));
-#line 11
+#line 25
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table3.AddRow(new string[] {
+                        "user1",
+                        "12.00"});
+#line 26
+ testRunner.When("I place a bid", ((string)(null)), table3, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table4.AddRow(new string[] {
+                        "user2",
+                        "10.00"});
+#line 29
+ testRunner.And("I place a bid", ((string)(null)), table4, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table5.AddRow(new string[] {
+                        "user4",
+                        "15.50"});
+#line 32
+ testRunner.And("I place a bid", ((string)(null)), table5, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table6.AddRow(new string[] {
+                        "user3",
+                        "00.05"});
+#line 35
+ testRunner.And("I place a bid", ((string)(null)), table6, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Price"});
+            table7.AddRow(new string[] {
+                        "user4",
+                        "15.50"});
+            table7.AddRow(new string[] {
+                        "user1",
+                        "12.00"});
+            table7.AddRow(new string[] {
+                        "user2",
+                        "10.00"});
+            table7.AddRow(new string[] {
+                        "user3",
+                        "00.05"});
+#line 38
+ testRunner.Then("the response will contain the bid list", ((string)(null)), table7, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
