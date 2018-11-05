@@ -4,6 +4,9 @@
 	I want to be told when my bid is invalid
 
 
+Background: 
+	Given there is an open auction
+
 
 Scenario: Place bid without price - Get an error
 	When I place a bid
