@@ -104,6 +104,7 @@
     <Compile Include="ApiClient\AuctionsApiClient.cs" />
     <Compile Include="Steps\AuctionsSteps.cs" />
     <Compile Include="Steps\AuctionsTestContext.cs" />
+    <Compile Include="Steps\BidsSteps.cs" />
     <Compile Include="Steps\StepsBase.cs" />
     <Compile Include="Steps\TestContextBase.cs" />
   </ItemGroup>
