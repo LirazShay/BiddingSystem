@@ -17,7 +17,8 @@ namespace BiddingSystem.Controllers
                 return BadRequest("Bid cannot be empty!");
             if (!bid.Price.HasValue)
                 return BadRequest("Price cannot be empty!");
-
+            if (string.IsNullOrEmpty(bid.Username))
+                return BadRequest("Username cannot be empty!");
             return Ok();
         }
     }
