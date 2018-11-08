@@ -10,6 +10,7 @@ namespace BiddingSystem.Controllers
 {
     public class AuctionsController : ApiController
     {
+        [HttpPost]
         public IHttpActionResult AddAuction(Auction auction)
         {
             return Ok();
