@@ -100,6 +100,7 @@
     </Compile>
     <Compile Include="Hooks\BiddingHooks.cs" />
     <Compile Include="ApiClient\HttpServerFactory.cs" />
+    <Compile Include="Steps\StepArgsTransformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ApiClient\AuctionsApiClient.cs" />
     <Compile Include="Steps\AuctionsSteps.cs" />
