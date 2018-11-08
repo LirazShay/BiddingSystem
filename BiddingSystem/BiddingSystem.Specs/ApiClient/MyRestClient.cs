@@ -20,16 +20,24 @@ namespace BiddingSystem.Specs.ApiClient
             return request;
         }
 
+        private HttpResponseMessage SendRequest(HttpRequestMessage request)
+        {
+            var task = HttpClient.SendAsync(request);
+            return (LastResponse = task.Result);
+        }
+
+
         public MyRestClient(HttpClient httpClient)
         {
             HttpClient = httpClient;
         }
 
+        public HttpResponseMessage LastResponse { get; private set; }
+
         public HttpResponseMessage SendRequest(string url, HttpMethod method)
         {
             var request = CreateRequest(url, method);
-            var task = HttpClient.SendAsync(request);
-            return task.Result;
+            return SendRequest(request);
         }
 
 
@@ -37,8 +45,7 @@ namespace BiddingSystem.Specs.ApiClient
         {
             HttpRequestMessage request = CreateRequest(url, method);
             request.Content = new ObjectContent<T>(content, new JsonMediaTypeFormatter());
-            var task = HttpClient.SendAsync(request);
-            return task.Result;
+            return SendRequest(request);
         }
     }
 }

@@ -6,15 +6,14 @@ namespace BiddingSystem.Specs.ApiClient
 {
     public class AuctionsApiClient : ApiClientBase
     {
+        public AuctionsApiClient(MyRestClient restClient) : base(restClient)
+        {
+        }
+
         public void CreateAuction(string auctionName)
         {
             Auction ac = new Auction() {AuctionName = auctionName};
             RestClient.SendRequest("/api/auctions", HttpMethod.Post, ac);
-        }
-
-
-        public AuctionsApiClient(HttpServer server) : base(server)
-        {
         }
     }
 }

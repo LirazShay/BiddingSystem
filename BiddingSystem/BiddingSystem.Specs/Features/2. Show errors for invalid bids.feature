@@ -8,6 +8,11 @@ Background:
 	Given there is an open auction
 
 
+Scenario: Place empty bid - Get an error
+	When I send place bid request without bid
+	Then I will get an error "Bid cannot be empty!"
+
+
 Scenario: Place bid without price - Get an error
 	When I place a bid
 		| Username | Price |

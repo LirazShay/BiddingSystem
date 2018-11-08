@@ -7,10 +7,9 @@ namespace BiddingSystem.Specs.ApiClient
     {
         protected MyRestClient RestClient { get; }
 
-        public ApiClientBase(HttpServer server)
+        public ApiClientBase(MyRestClient restClient)
         {
-            var httpClient = new HttpClient(server);
-            RestClient = new MyRestClient(httpClient);
+            RestClient = restClient;
         }
     }
 }

@@ -12,10 +12,12 @@ namespace BiddingSystem.Specs.Hooks
     public sealed class BiddingHooks : StepsBase
     {
         [BeforeScenario]
-        public void BeforeScenarioStartServer()
+        public void InitializeServerBeforeScenario()
         {
             var server = HttpServerFactory.StartServer();
+            var restClient = MyRestClientFactory.CreateRestClient(server);
             ScenarioContext.ScenarioContainer.RegisterInstanceAs(server,dispose:true);
+            ScenarioContext.ScenarioContainer.RegisterInstanceAs(restClient, dispose: true);
         }
     }
 }
