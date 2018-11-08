@@ -112,7 +112,7 @@ this.FeatureBackground();
                         "Price"});
             table1.AddRow(new string[] {
                         "user1",
-                        "Null"});
+                        ""});
 #line 17
  testRunner.When("I place a bid", ((string)(null)), table1, "When ");
 #line 20

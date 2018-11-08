@@ -16,7 +16,7 @@ Scenario: Place empty bid - Get an error
 Scenario: Place bid without price - Get an error
 	When I place a bid
 		| Username | Price |
-		| user1    | Null  |
+		| user1    |       |
 	Then I will get an error "Price cannot be empty!"
 
 
