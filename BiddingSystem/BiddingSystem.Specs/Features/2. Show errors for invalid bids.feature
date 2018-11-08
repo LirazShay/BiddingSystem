@@ -37,5 +37,5 @@ Scenario: Place bid with price lesser than 0 - Get an error
 Scenario: Place bid without username - Get an error
 	When I place a bid
 		| Username | Price |
-		| user1    | -1    |
-	Then I will get an error "Price must be greater than 0"
+		|          | 10    |
+	Then I will get an error "Username cannot be empty!"

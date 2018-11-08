@@ -186,12 +186,12 @@ this.FeatureBackground();
                         "Username",
                         "Price"});
             table4.AddRow(new string[] {
-                        "user1",
-                        "-1"});
+                        "",
+                        "10"});
 #line 38
  testRunner.When("I place a bid", ((string)(null)), table4, "When ");
 #line 41
- testRunner.Then("I will get an error \"Price must be greater than 0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I will get an error \"Username cannot be empty!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
