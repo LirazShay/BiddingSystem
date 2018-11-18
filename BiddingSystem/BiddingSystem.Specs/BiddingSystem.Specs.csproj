@@ -129,6 +129,10 @@
       <Project>{46e16d23-18e6-4d71-9e44-4f705cf0c4ff}</Project>
       <Name>BiddingSystem.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BiddingSystem.Services\BiddingSystem.Services.csproj">
+      <Project>{A1502EE5-4337-4689-88ED-B39F3F98254B}</Project>
+      <Name>BiddingSystem.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BiddingSystem\BiddingSystem.csproj">
       <Project>{45ae976c-492a-4fed-93d3-6d9f6812df0f}</Project>
       <Name>BiddingSystem</Name>

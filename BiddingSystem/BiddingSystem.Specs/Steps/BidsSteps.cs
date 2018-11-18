@@ -1,5 +1,6 @@
 ﻿using BiddingSystem.Entities;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 
 namespace BiddingSystem.Specs.Steps
 {
@@ -22,7 +23,8 @@ namespace BiddingSystem.Specs.Steps
         [Then(@"the bid list will be")]
         public void ThenTheBidListWillBe(Table table)
         {
-            ScenarioContext.Current.Pending();
+            var allBids = BidsTestContext.GetAllBids();
+            table.CompareToSet(allBids);
         }
 
     }

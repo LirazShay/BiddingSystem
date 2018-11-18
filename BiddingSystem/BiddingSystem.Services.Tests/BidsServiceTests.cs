@@ -71,6 +71,18 @@ namespace BiddingSystem.Services.Tests
             StringAssert.Contains("Username can't be null", ex.Message);
         }
 
+        [TestCase(" ")]
+        [TestCase("")]
+        public void PlaceBid_WithInvalidUsername_WillThrowException(string username)
+        {
+            Bid bid = new Bid() { Price = 10,Username = username};
+
+            TestDelegate act = () => BidsService.PlaceBid(bid);
+
+            var ex = Assert.Throws<ArgumentException>(act);
+            StringAssert.Contains("Username can't be null", ex.Message);
+        }
+
 
         [TestCase(-0.01)]
         [TestCase(-1)]

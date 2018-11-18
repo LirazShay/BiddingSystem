@@ -1,4 +1,6 @@
-﻿using BiddingSystem.Entities;
+﻿using System.Collections.Generic;
+using BiddingSystem.Entities;
+using BiddingSystem.Services;
 using BiddingSystem.Specs.ApiClient;
 
 namespace BiddingSystem.Specs.Steps
@@ -10,6 +12,11 @@ namespace BiddingSystem.Specs.Steps
         public void PlaceBid(Bid bid)
         {
             BidsApi.PlaceBid(bid);
+        }
+
+        public IList<Bid> GetAllBids()
+        {
+            return BidsService.GetAllBids();
         }
     }
 }
