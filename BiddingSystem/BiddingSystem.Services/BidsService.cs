@@ -16,6 +16,9 @@ namespace BiddingSystem.Services
             if (bid.Price == null) throw new ArgumentException(nameof(bid.Price) + " can't be null");
             if (bid.Price <= 0) throw new ArgumentException("Invalid price, price should be greater than 0");
             if (!bid.AuctionId.HasValue) throw new ArgumentException(nameof(bid.AuctionId) + " can't be null");
+
+            var previousBid = bids.FirstOrDefault(a=>a.AuctionId == bid.AuctionId && a.Username == bid.Username);
+            bids.Remove(previousBid);
             bids.Add(bid);
         }
 
