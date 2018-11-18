@@ -23,5 +23,11 @@ namespace BiddingSystem.Specs.Steps
             BidsTestContext.PlaceBid(null);
         }
 
+        [Then(@"the bid list will be")]
+        public void ThenTheBidListWillBe(Table table)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
     }
 }

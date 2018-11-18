@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiddingSystem.Specs", "Bidd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiddingSystem", "BiddingSystem\BiddingSystem.csproj", "{45AE976C-492A-4FED-93D3-6D9F6812DF0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiddingSystem.Services", "BiddingSystem.Services\BiddingSystem.Services.csproj", "{A1502EE5-4337-4689-88ED-B39F3F98254B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{45AE976C-492A-4FED-93D3-6D9F6812DF0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45AE976C-492A-4FED-93D3-6D9F6812DF0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45AE976C-492A-4FED-93D3-6D9F6812DF0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1502EE5-4337-4689-88ED-B39F3F98254B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1502EE5-4337-4689-88ED-B39F3F98254B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1502EE5-4337-4689-88ED-B39F3F98254B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1502EE5-4337-4689-88ED-B39F3F98254B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
