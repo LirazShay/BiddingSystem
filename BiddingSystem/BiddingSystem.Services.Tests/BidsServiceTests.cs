@@ -40,6 +40,21 @@ namespace BiddingSystem.Services.Tests
         }
 
         [Test]
+        public void PlaceBid_UpdatePrice_WillUpdateTheLastBid()
+        {
+            var firstBid = new Bid() {AuctionId = 1, Price = 10, Username = "TestUsername"};
+            BidsService.PlaceBid(firstBid);
+
+            var secondBid = new Bid() { AuctionId = 1, Price = 12, Username = "TestUsername" };
+            BidsService.PlaceBid(secondBid);
+
+            var allBids = BidsService.GetAllBids(1);
+            Assert.AreEqual(1,allBids.Count);
+            allBids[0].ShouldCompare(secondBid);
+        }
+
+
+        [Test]
         public void PlaceBid_WithNullBid_WillThrowException()
         {
             TestDelegate act = 
