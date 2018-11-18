@@ -28,12 +28,13 @@ namespace BiddingSystem.Services.Tests
             var newBid = new Bid()
             {
                 Price = price,
-                Username = username
+                Username = username,
+                AuctionId = 1
             };
 
             BidsService.PlaceBid(newBid);
 
-            var bids = BidsService.GetAllBids();
+            var bids = BidsService.GetAllBids(1);
             var actualBid = bids.First();
             actualBid.ShouldCompare(newBid);
         }

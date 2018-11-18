@@ -1,5 +1,7 @@
 ﻿using System.Net.Http;
 using BiddingSystem.Entities;
+using Newtonsoft.Json;
+
 namespace BiddingSystem.Specs.ApiClient
 {
     public class AuctionsApiClient : ApiClientBase
@@ -8,10 +10,12 @@ namespace BiddingSystem.Specs.ApiClient
         {
         }
 
-        public void CreateAuction(string auctionName)
+        public Auction CreateAuction(string auctionName)
         {
             Auction ac = new Auction() {AuctionName = auctionName};
-            RestClient.SendRequest("/api/auctions", HttpMethod.Post, ac);
+            return RestClient
+                .SendRequest("/api/auctions", HttpMethod.Post, ac)
+                .DeserializeTo<Auction>();
         }
     }
 }

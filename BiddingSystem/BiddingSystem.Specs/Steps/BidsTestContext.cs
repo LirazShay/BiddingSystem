@@ -9,14 +9,18 @@ namespace BiddingSystem.Specs.Steps
     {
         private BidsApiClient BidsApi => Resolve<BidsApiClient>();
 
+        public int LastAuctionId => Resolve<AuctionsTestContext>().LastAuction.Id;
+
         public void PlaceBid(Bid bid)
         {
+            if (!bid.AuctionId.HasValue)
+                bid.AuctionId = LastAuctionId;
             BidsApi.PlaceBid(bid);
         }
 
         public IList<Bid> GetAllBids()
         {
-            return BidsService.GetAllBids();
+            return BidsService.GetAllBids(LastAuctionId);
         }
     }
 }

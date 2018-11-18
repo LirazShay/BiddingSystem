@@ -1,5 +1,6 @@
 ﻿using System.Web.Http;
 using BiddingSystem.Entities;
+using BiddingSystem.Services;
 
 namespace BiddingSystem.Controllers
 {
@@ -8,7 +9,8 @@ namespace BiddingSystem.Controllers
         [HttpPost]
         public IHttpActionResult AddAuction(Auction auction)
         {
-            return Ok();
+            auction = AuctionsService.AddNewAuction(auction);
+            return Ok(auction);
         }
     }
 }

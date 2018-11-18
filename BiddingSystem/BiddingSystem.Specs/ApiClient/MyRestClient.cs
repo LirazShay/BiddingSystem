@@ -23,7 +23,9 @@ namespace BiddingSystem.Specs.ApiClient
         private HttpResponseMessage SendRequest(HttpRequestMessage request)
         {
             var task = HttpClient.SendAsync(request);
-            return (LastResponse = task.Result);
+            LastResponse = task.Result;
+            LastResponse.EnsureSuccessStatusCode();
+            return LastResponse;
         }
 
 
