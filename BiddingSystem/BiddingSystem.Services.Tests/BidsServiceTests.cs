@@ -9,6 +9,17 @@ namespace BiddingSystem.Services.Tests
     [TestFixture]
     public class BidsServiceTests
     {
+        [SetUp]
+        public void SetUp()
+        {
+            BidsService.ClearAllBids();
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            BidsService.ClearAllBids();
+        }
 
         [TestCase(0.01, "M")]
         [TestCase(10,"Rami")]

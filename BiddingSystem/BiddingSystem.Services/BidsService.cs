@@ -22,5 +22,10 @@ namespace BiddingSystem.Services
         {
             return bids.AsReadOnly();
         }
+
+        public static void ClearAllBids()
+        {
+            bids.Clear();
+        }
     }
 }
