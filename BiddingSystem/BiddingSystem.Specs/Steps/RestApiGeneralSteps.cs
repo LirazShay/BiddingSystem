@@ -16,5 +16,8 @@ namespace BiddingSystem.Specs.Steps
             Assert.IsFalse(lastResponse.IsSuccessStatusCode);
             StringAssert.Contains(error,lastResponse.Content.ReadAsStringAsync().Result);
         }
+
+        
+
     }
 }

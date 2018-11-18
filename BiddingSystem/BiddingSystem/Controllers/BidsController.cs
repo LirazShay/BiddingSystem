@@ -22,5 +22,13 @@ namespace BiddingSystem.Controllers
 
             return Ok();
         }
+
+        [Route("api/auctions/{auctionId}/bids")]
+        [HttpGet]
+        public IHttpActionResult GetAllBids(int auctionId)
+        {
+            var allBids = BidsService.GetAllBids(auctionId);
+            return Ok(allBids);
+        }
     }
 }

@@ -10,7 +10,7 @@ Background:
 
 Scenario: When there are no bids yet - Get empty list
 	When I perform get all bids request
-	Then the response will be empty
+	Then the response will be empty bids list
 
 	
 Scenario: There is only 1 bid, get this bid
