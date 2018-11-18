@@ -25,7 +25,7 @@ namespace BiddingSystem.Services
         public static IList<Bid> GetAllBids(int auctionId)
         {
             return bids.Where(a => a.AuctionId == auctionId)
-                .OrderByDescending(a=>a.Price)
+                .OrderByDescending(a => a.Price)
                 .ToList()
                 .AsReadOnly();
         }
