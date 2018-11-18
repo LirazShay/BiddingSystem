@@ -12,19 +12,27 @@ namespace BiddingSystem.Specs.Steps
         [When(@"I place a bid")]
         public void WhenIPlaceABid(Bid bid)
         {
-            BidsTestContext.PlaceBid(bid);
+            BidsTestContext.PlaceBidByApi(bid);
         }
+
+
+        [When(@"I perform get all bids request")]
+        public void WhenIPerformGetAllBidsRequest()
+        {
+            
+        }
+
 
         [When(@"I send place bid request without bid")]
         public void WhenISendPlaceBidRequestWithoutBid()
         {
-            BidsTestContext.PlaceBid(null);
+            BidsTestContext.PlaceBidByApi(null);
         }
 
         [Then(@"the bid list will be")]
         public void ThenTheBidListWillBe(Table table)
         {
-            var allBids = BidsTestContext.GetAllBids();
+            var allBids = BidsTestContext.GetAllBidsFromService();
             table.CompareToSet(allBids);
         }
 

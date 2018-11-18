@@ -11,14 +11,14 @@ namespace BiddingSystem.Specs.Steps
 
         public int LastAuctionId => Resolve<AuctionsTestContext>().LastAuction.Id;
 
-        public void PlaceBid(Bid bid)
+        public void PlaceBidByApi(Bid bid)
         {
             if (bid != null && !bid.AuctionId.HasValue)
                 bid.AuctionId = LastAuctionId;
             BidsApi.PlaceBid(bid);
         }
 
-        public IList<Bid> GetAllBids()
+        public IList<Bid> GetAllBidsFromService()
         {
             return BidsService.GetAllBids(LastAuctionId);
         }
