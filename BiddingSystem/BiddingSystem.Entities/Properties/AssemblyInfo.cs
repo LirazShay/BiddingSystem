@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BiddingSystem.Services")]
+[assembly: AssemblyTitle("BiddingSystem.Entities")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BiddingSystem.Services")]
+[assembly: AssemblyProduct("BiddingSystem.Entities")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a1502ee5-4337-4689-88ed-b39f3f98254b")]
+[assembly: Guid("46e16d23-18e6-4d71-9e44-4f705cf0c4ff")]
 
 // Version information for an assembly consists of the following four values:
 //

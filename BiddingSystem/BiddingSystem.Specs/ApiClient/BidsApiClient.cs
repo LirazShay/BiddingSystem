@@ -1,6 +1,5 @@
 ﻿using System.Net.Http;
-using System.Web.Http;
-using BiddingSystem.Models;
+using BiddingSystem.Entities;
 
 namespace BiddingSystem.Specs.ApiClient
 {

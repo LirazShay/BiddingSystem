@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using BiddingSystem.Specs.ApiClient;
+﻿using BiddingSystem.Specs.ApiClient;
 using BiddingSystem.Specs.Steps;
 using TechTalk.SpecFlow;
 

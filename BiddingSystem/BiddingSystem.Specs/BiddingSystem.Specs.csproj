@@ -125,6 +125,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BiddingSystem.Entities\BiddingSystem.Entities.csproj">
+      <Project>{46e16d23-18e6-4d71-9e44-4f705cf0c4ff}</Project>
+      <Name>BiddingSystem.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BiddingSystem\BiddingSystem.csproj">
       <Project>{45ae976c-492a-4fed-93d3-6d9f6812df0f}</Project>
       <Name>BiddingSystem</Name>

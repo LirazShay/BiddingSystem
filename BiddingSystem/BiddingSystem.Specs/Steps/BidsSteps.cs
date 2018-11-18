@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using BiddingSystem.Models;
+﻿using BiddingSystem.Entities;
 using TechTalk.SpecFlow;
 
 namespace BiddingSystem.Specs.Steps

@@ -1,4 +1,4 @@
-﻿using BiddingSystem.Models;
+﻿using BiddingSystem.Entities;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 

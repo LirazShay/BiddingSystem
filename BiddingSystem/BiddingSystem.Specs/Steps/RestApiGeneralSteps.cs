@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using BiddingSystem.Specs.ApiClient;
+﻿using BiddingSystem.Specs.ApiClient;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
 

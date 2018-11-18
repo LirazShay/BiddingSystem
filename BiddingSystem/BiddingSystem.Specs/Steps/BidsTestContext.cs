@@ -1,4 +1,4 @@
-﻿using BiddingSystem.Models;
+﻿using BiddingSystem.Entities;
 using BiddingSystem.Specs.ApiClient;
 
 namespace BiddingSystem.Specs.Steps

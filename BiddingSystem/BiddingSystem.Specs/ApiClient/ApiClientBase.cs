@@ -1,7 +1,4 @@
-﻿using System.Net.Http;
-using System.Web.Http;
-
-namespace BiddingSystem.Specs.ApiClient
+﻿namespace BiddingSystem.Specs.ApiClient
 {
     public class ApiClientBase
     {

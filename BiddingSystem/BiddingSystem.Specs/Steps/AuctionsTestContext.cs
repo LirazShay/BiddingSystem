@@ -1,7 +1,4 @@
-﻿using System;
-using BiddingSystem.Specs.ApiClient;
-using BoDi;
-using TechTalk.SpecFlow;
+﻿using BiddingSystem.Specs.ApiClient;
 
 namespace BiddingSystem.Specs.Steps
 {

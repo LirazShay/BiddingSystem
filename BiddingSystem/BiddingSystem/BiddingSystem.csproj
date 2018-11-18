@@ -88,8 +88,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Auction.cs" />
-    <Compile Include="Models\Bid.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +103,10 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BiddingSystem.Entities\BiddingSystem.Entities.csproj">
+      <Project>{46e16d23-18e6-4d71-9e44-4f705cf0c4ff}</Project>
+      <Name>BiddingSystem.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BiddingSystem.Services\BiddingSystem.Services.csproj">
       <Project>{a1502ee5-4337-4689-88ed-b39f3f98254b}</Project>
       <Name>BiddingSystem.Services</Name>
