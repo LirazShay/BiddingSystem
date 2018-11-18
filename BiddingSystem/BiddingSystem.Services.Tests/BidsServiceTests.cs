@@ -33,7 +33,7 @@ namespace BiddingSystem.Services.Tests
 
             var ex = Assert.Throws<ArgumentNullException>(act); 
 
-            StringAssert.Contains("Bid can't be null",ex.Message);
+            StringAssert.Contains("Value cannot be null.\r\nParameter name: bid",ex.Message);
         }
 
     }

@@ -10,6 +10,7 @@ namespace BiddingSystem.Services
 
         public static void PlaceBid(Bid bid)
         {
+            if (bid == null) throw new ArgumentNullException(nameof(bid));
             bids.Add(bid);
         }
 
