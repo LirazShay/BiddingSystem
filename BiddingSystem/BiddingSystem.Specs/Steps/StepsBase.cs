@@ -1,4 +1,5 @@
-﻿using TechTalk.SpecFlow;
+﻿using System.Linq;
+using TechTalk.SpecFlow;
 
 namespace BiddingSystem.Specs.Steps
 {
@@ -8,6 +9,12 @@ namespace BiddingSystem.Specs.Steps
         protected T Resolve<T>()
         {
             return ScenarioContext.ScenarioContainer.Resolve<T>();
+        }
+
+        public bool IsScenarioHasTag(string tag)
+        {
+            return ScenarioContext.ScenarioInfo.Tags.Any(a => a == tag)
+                   || FeatureContext.FeatureInfo.Tags.Any(a => a == tag);
         }
     }
 }

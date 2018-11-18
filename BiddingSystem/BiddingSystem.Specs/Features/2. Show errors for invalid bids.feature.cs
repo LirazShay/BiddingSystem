@@ -19,6 +19,7 @@ namespace BiddingSystem.Specs.Features
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("Show errors for invalid bids")]
+    [NUnit.Framework.CategoryAttribute("ErrorStatusCode")]
     public partial class ShowErrorsForInvalidBidsFeature
     {
         
@@ -32,7 +33,8 @@ namespace BiddingSystem.Specs.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Show errors for invalid bids", "\tIn order to avoid invalid bids from being saved\r\n\tAs a user\r\n\tI want to be told " +
-                    "when my bid is invalid", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "when my bid is invalid", ProgrammingLanguage.CSharp, new string[] {
+                        "ErrorStatusCode"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -72,8 +74,8 @@ namespace BiddingSystem.Specs.Features
         
         public virtual void FeatureBackground()
         {
-#line 7
 #line 8
+#line 9
  testRunner.Given("there is an open auction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
@@ -83,14 +85,14 @@ namespace BiddingSystem.Specs.Features
         public virtual void PlaceEmptyBid_GetAnError()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Place empty bid - Get an error", null, ((string[])(null)));
-#line 11
+#line 12
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 7
+#line 8
 this.FeatureBackground();
-#line 12
- testRunner.When("I send place bid request without bid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
+ testRunner.When("I send place bid request without bid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 14
  testRunner.Then("I will get an error \"Bid cannot be empty!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -101,10 +103,10 @@ this.FeatureBackground();
         public virtual void PlaceBidWithoutPrice_GetAnError()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Place bid without price - Get an error", null, ((string[])(null)));
-#line 16
+#line 17
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 7
+#line 8
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -113,9 +115,9 @@ this.FeatureBackground();
             table1.AddRow(new string[] {
                         "user1",
                         ""});
-#line 17
+#line 18
  testRunner.When("I place a bid", ((string)(null)), table1, "When ");
-#line 20
+#line 21
  testRunner.Then("I will get an error \"Price cannot be empty!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -126,10 +128,10 @@ this.FeatureBackground();
         public virtual void PlaceBidWithPrice0_GetAnError()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Place bid with price 0 - Get an error", null, ((string[])(null)));
-#line 23
+#line 24
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 7
+#line 8
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -138,9 +140,9 @@ this.FeatureBackground();
             table2.AddRow(new string[] {
                         "user1",
                         "0"});
-#line 24
+#line 25
  testRunner.When("I place a bid", ((string)(null)), table2, "When ");
-#line 27
+#line 28
  testRunner.Then("I will get an error \"Price must be greater than 0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -151,10 +153,10 @@ this.FeatureBackground();
         public virtual void PlaceBidWithPriceLesserThan0_GetAnError()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Place bid with price lesser than 0 - Get an error", null, ((string[])(null)));
-#line 30
+#line 31
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 7
+#line 8
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -163,9 +165,9 @@ this.FeatureBackground();
             table3.AddRow(new string[] {
                         "user1",
                         "-1"});
-#line 31
+#line 32
  testRunner.When("I place a bid", ((string)(null)), table3, "When ");
-#line 34
+#line 35
  testRunner.Then("I will get an error \"Price must be greater than 0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -176,10 +178,10 @@ this.FeatureBackground();
         public virtual void PlaceBidWithoutUsername_GetAnError()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Place bid without username - Get an error", null, ((string[])(null)));
-#line 37
+#line 38
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 7
+#line 8
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -188,9 +190,9 @@ this.FeatureBackground();
             table4.AddRow(new string[] {
                         "",
                         "10"});
-#line 38
+#line 39
  testRunner.When("I place a bid", ((string)(null)), table4, "When ");
-#line 41
+#line 42
  testRunner.Then("I will get an error \"Username cannot be empty!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -79,6 +79,7 @@
     <Compile Include="ApiClient\ApiClientBase.cs" />
     <Compile Include="ApiClient\Extensions.cs" />
     <Compile Include="ApiClient\MyRestClient.cs" />
+    <Compile Include="AssemblyAttributes.cs" />
     <Compile Include="Features\3. Get all bids.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -98,6 +99,7 @@
     <Compile Include="ApiClient\HttpServerFactory.cs" />
     <Compile Include="ApiClient\BidsApiClient.cs" />
     <Compile Include="ApiClient\MyRestClientFactory.cs" />
+    <Compile Include="Hooks\GeneralHooks.cs" />
     <Compile Include="Steps\BidsTestContext.cs" />
     <Compile Include="Steps\RestApiGeneralSteps.cs" />
     <Compile Include="Steps\StepArgsTransformation.cs" />

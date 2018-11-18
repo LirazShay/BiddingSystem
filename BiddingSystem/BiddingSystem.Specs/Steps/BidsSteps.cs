@@ -1,4 +1,5 @@
-﻿using BiddingSystem.Entities;
+﻿using System.Linq;
+using BiddingSystem.Entities;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 

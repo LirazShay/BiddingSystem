@@ -1,4 +1,5 @@
-﻿Feature: Show errors for invalid bids
+﻿@ErrorStatusCode
+Feature: Show errors for invalid bids
 	In order to avoid invalid bids from being saved
 	As a user
 	I want to be told when my bid is invalid

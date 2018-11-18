@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
+using System.Web.Http.Results;
 
 namespace BiddingSystem.Specs.ApiClient
 {
@@ -24,7 +25,8 @@ namespace BiddingSystem.Specs.ApiClient
         {
             var task = HttpClient.SendAsync(request);
             LastResponse = task.Result;
-            LastResponse.EnsureSuccessStatusCode();
+            if (!IgnoreErrors)
+                LastResponse.EnsureSuccessStatusCode();
             return LastResponse;
         }
 
@@ -35,6 +37,7 @@ namespace BiddingSystem.Specs.ApiClient
         }
 
         public HttpResponseMessage LastResponse { get; private set; }
+        public bool IgnoreErrors { get; set; }
 
         public HttpResponseMessage SendRequest(string url, HttpMethod method)
         {

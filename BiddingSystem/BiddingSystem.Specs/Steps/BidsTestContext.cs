@@ -13,7 +13,7 @@ namespace BiddingSystem.Specs.Steps
 
         public void PlaceBid(Bid bid)
         {
-            if (!bid.AuctionId.HasValue)
+            if (bid != null && !bid.AuctionId.HasValue)
                 bid.AuctionId = LastAuctionId;
             BidsApi.PlaceBid(bid);
         }
